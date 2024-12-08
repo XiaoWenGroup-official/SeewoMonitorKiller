@@ -1,14 +1,14 @@
 # SeewoMonitorkiller
 SeewoMonitorKiller 是针对希沃希沃管家监控的反监控系统
-# SeewoMonitorSystem
+# SeewoMonitorKiller
 
 由于班主任时不时通过希沃的巡课系统（俗称监控）来查看上课情况，这对学生来说当然不是一个好消息。因此，本反监控系统就是监控希沃，并在有异常情况时立即报告。
 
 > [!CAUTION]
 >
-> 本项目最后更新于2024年6月，希沃管家相关行为机制可能已经更改，请在安全环境自行测试项目是否任然有效
+> 本项目最后更新于2024年12月8日，希沃管家相关行为机制可能已经更改，请在安全环境自行测试项目是否任然有效
 >
-> 在2024年5月左右，希沃管家绑定学校需要管理员密码验证，导致我虚拟机几乎失效
+> 本项目基于SeewoMonitorSystem 原项目地址https://github.com/DengHanxu/SeewoMonitorSystem
 
 > [!WARNING]
 >
