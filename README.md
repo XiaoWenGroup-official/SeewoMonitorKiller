@@ -1,18 +1,18 @@
 # SeewoMonitorkiller
-SeewoMonitorKiller 是针对希沃希沃管家监控的反监控系统 最新版本V1.2（已发布），V1.3（开发中）
+SeewoMonitorKiller 是针对希沃希沃管家监控的反监控系统 最新版本V1.2（已发布）
 # SeewoMonitorKiller
 
 由于班主任时不时通过希沃的巡课系统（俗称监控）来查看上课情况，这对学生来说当然不是一个好消息。因此，本反监控系统就是监控希沃，并在有异常情况时立即报告。
 
 > [!CAUTION]
 >
-> 本项目最后更新于2024年12月8日，希沃管家相关行为机制可能已经更改，请在安全环境自行测试项目是否任然有效
+> 本项目最后更新于2024年12月6日，希沃管家相关行为机制可能已经更改，请在安全环境自行测试项目是否任然有效
 >
-> 本项目基于SeewoMonitorSystem 原项目地址https://github.com/DengHanxu/SeewoMonitorSystem
+> 本项目基于 “SeewoMonitorSystem” 原项目地址 https://github.com/DengHanxu/SeewoMonitorSystem
 
 > [!WARNING]
 >
-> 本项目极小部分源码借鉴SeewoMonitorSystem，介于GPL-v3协议现进行开源
+> 本项目的思路构造以及极小部分源码借鉴SeewoMonitorSystem，由于GPL-v3协议有继承性，先基于GPL-v3开源
 
 # 原理
 
@@ -27,11 +27,11 @@ SeewoMonitorKiller 是针对希沃希沃管家监控的反监控系统 最新版
 SeewoMonitorKiller整合SeewoMonitorSystem的部分代码及在此基础上增加部分功能，将负责监控进程及杀进程的功能以指示块和系统通知的形式显示
 
 ### SeewoMonitorKiller-V1.0
-这是第一个版本，以大约`1次/秒`的速度检测`media_capture.exe`，`screenCapture.exe`，`rtcRemoteDesktop.exe`。
-当检测到`media_capture.exe`/`screenCapture.exe`/`rtcRemoteDesktop.exe`在运行时，就认为监控系统正在运行，并在屏幕上方正中的位置显示一个4x4像素的红/橙/蓝色方块。
-当`media_capture.exe`/`screenCapture.exe`/`rtcRemoteDesktop.exe`结束运行时，就认为本次监控结束，对应方块消失。
-> [!WARNING]
-> 当前版本已不建议使用，检测延迟比SeewoMonitorSystem还有多≥1.5s，经测试至多延迟1.9s才会显示色块且并不显眼
+这是第一个版本，默认以大约`1次/秒`的速度检测`media_capture.exe`，`screenCapture.exe`，`rtcRemoteDesktop.exe`。
+当检测到`media_capture.exe`或`screenCapture.exe`或`rtcRemoteDesktop.exe`在运行时，就认为监控系统正在运行，并在屏幕上方正中的位置(已修复SeewoMonitorSystem显示偏左的问题)显示一个4x4像素的红/橙/蓝色方块。
+当`media_capture.exe`或`screenCapture.exe`或`rtcRemoteDesktop.exe`结束运行时，就认为本次监控结束，对应方块消失。
+> [!IMPORTANT]
+> 当前版本已不建议使用，检测延迟比SeewoMonitorSystem还有多≥1.5s，经测试延迟0.6s-1.5s才会显示色块且并不显眼
 
 /## Sound
 
