@@ -1,6 +1,5 @@
 # SeewoMonitorkiller
 SeewoMonitorKiller 是针对希沃希沃管家监控的反监控系统 最新版本V1.2（已发布）
-# SeewoMonitorKiller
 
 由于班主任时不时通过希沃的巡课系统（俗称监控）来查看上课情况，这对学生来说当然不是一个好消息。因此，本反监控系统就是监控希沃，并在有异常情况时立即报告。
 
