@@ -38,7 +38,7 @@ SeewoMonitorKiller整合SeewoMonitorSystem的部分代码及在此基础上增�
 > 当前版本已不建议使用，检测延迟比SeewoMonitorSystem还有多≥1.5s，经测试延迟0.6s-1.5s才会显示色块且并不显眼
 
 >[!IMPORTANT]
->此程序已在代码中修改提权方式，不必像 SeewoMonitorSystem[SeewoMonitorSystem](https://github.com/DengHanxu/SeewoMonitorSystem) 一样调用`Nsudo.exe`才能发挥作用
+>此程序已在代码中修改提权方式，不必像 [SeewoMonitorSystem](https://github.com/DengHanxu/SeewoMonitorSystem) 一样调用`Nsudo.exe`才能发挥作用
 >有关`Nsudo.exe`，请参阅 [Nsudo](https://github.com/M2TeamArchived/NSudo)
 
 # 使用本项目
