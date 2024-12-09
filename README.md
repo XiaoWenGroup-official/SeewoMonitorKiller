@@ -26,26 +26,38 @@ SeewoMonitorKiller 是针对希沃希沃管家监控的反监控系统 最新版
 
 ## SeewoMonitorKiller
 
-SeewoMonitorKiller整合SeewoMonitorSystem的部分代码及在此基础上增加部分功能，将负责监控进程及杀进程的功能以指示块和系统通知的形式显示
+SeewoMonitorKiller 整合SeewoMonitorSystem的部分代码及在此基础上增加部分功能，将负责监控进程及杀进程的功能以指示块和系统通知的形式显示
 
-#版本介绍
+##功能介绍
+
+SeewoMonitorKiller (V1.2) 在检测到[原理](#原理)中的三个应用程序进程存在时会进行系统通知(仅兼容Windows10&Windows11)，期间会调用程序根目录下的图标文件作为通知图标，如图![](notice-1.png)，确保根目录下有white.ico（系统黑暗模式使用）和black.ico（系统白天模式使用）。同时顶部会出现和 [SeewoMonitorSystem](https://github.com/DengHanxu/SeewoMonitorSystem) 一样的四个4x4图标，但是最左端的绿色图标机制已更改为右侧无任何进程存在的情况下亮起，便于在快速查看进程是否运行或本程序是否运行正常。
+
+##版本介绍
 
 ### SeewoMonitorKiller-V1.0
 这是第一个版本，默认以大约`1次/秒`的速度检测`media_capture.exe`，`screenCapture.exe`，`rtcRemoteDesktop.exe`。
 当检测到`media_capture.exe`或`screenCapture.exe`或`rtcRemoteDesktop.exe`在运行时，就认为监控系统正在运行，并在屏幕上方正中的位置(已修复SeewoMonitorSystem显示偏左的问题)显示一个4x4像素的红/橙/蓝色方块。
 当`media_capture.exe`或`screenCapture.exe`或`rtcRemoteDesktop.exe`结束运行时，就认为本次监控结束，对应方块消失。
 > [!IMPORTANT]
-> 当前版本已不建议使用，检测延迟比SeewoMonitorSystem还有多≥1.5s，经测试延迟0.6s-1.5s才会显示色块且并不显眼
+> 当前版本已不建议使用，故没有上传，检测延迟比 [SeewoMonitorSystem](https://github.com/DengHanxu/SeewoMonitorSystem) 还有多≥1.5s，经测试延迟0.6s-1.5s才会显示色块且并不显眼
 
 >[!IMPORTANT]
 >此程序已在代码中修改提权方式，不必像 [SeewoMonitorSystem](https://github.com/DengHanxu/SeewoMonitorSystem) 一样调用`Nsudo.exe`才能发挥作用
 >有关`Nsudo.exe`，请参阅 [Nsudo](https://github.com/M2TeamArchived/NSudo)
 
+### SeewoMonitorKiller-V1.1
+这是第二个版本，本版本增加了检测进程时间、低网络检测时间、低网络关闭阈值、被监控程序被本程序关闭(低网络情况下)的时间的自定义，增加了是否同意持续低网络(用户阈值网络使用大小)时间到用户阈值时间是否杀掉程序的自定义选项
+> [!IMPORTANT]
+> 当前版本已不建议使用，故没有上传
+
+> [!IMPORTANT]
+> 当前版本与V1.0版本在初始化时均要使用3s以上且顶部绿灯在检测到右侧程序运行1次后再也不会亮起(暂未确定原因，故后来版本-在V1.2及之后的版本修改了绿灯的逻辑)
+
 # 使用本项目
 ## 打包成exe
 
 1. 运行`pip.bat`安装依赖库
-2. 使用`pyinstaller SeewoMonitor2.py -F -w`命令打包
+2. 使用`pyinstaller --onefile --noconsole --add-data "white.ico;.\\white.ico" --add-data "black.ico;.\\black.ico" --hidden-import=plyer.platforms.win.notification SeewoMonitorKiller-V版本号(例如V1.2).py`命令打包
 
 > [!CAUTION]
 > 使用`pyinstaller`打包的exe会被`WindowsDeferder`等报毒为特洛伊木马，程序本身并没有病毒
