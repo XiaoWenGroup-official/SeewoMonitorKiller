@@ -1,4 +1,6 @@
 # SeewoMonitorkiller
+> [!CAUTION]
+> 本项目(SeewoMonitorKiller)基于GPL-v3协议开源
 SeewoMonitorKiller 是针对希沃希沃管家监控的反监控系统 最新版本V1.2（已发布）
 
 由于班主任时不时通过希沃的巡课系统（俗称监控）来查看上课情况，这对学生来说当然不是一个好消息。因此，本反监控系统就是监控希沃，并在有异常情况时立即报告。
@@ -11,7 +13,7 @@ SeewoMonitorKiller 是针对希沃希沃管家监控的反监控系统 最新版
 
 > [!WARNING]
 >
-> 本项目的思路构造以及极小部分源码借鉴SeewoMonitorSystem，由于GPL-v3协议有继承性，先基于GPL-v3开源
+> 本项目的思路构造以及极小部分源码借鉴SeewoMonitorSystem，由于GPL-v3协议有继承性，现基于GPL-v3开源
 
 # 原理
 
