@@ -75,7 +75,7 @@ SeewoMonitorKiller（V1.4至最新）将在托盘放置一个Windows Defender的
 ### SeewoMonitorKiller-V1.3
 这是第四个版本，更换数组使关于中自定义监测时间可为小数，进一步降低监测延迟，优化其它方面使代码容错率更高，将“关闭通知”改为“静音通知”
 
->[!importance]
+>[!important]
 >静音通知仅为预期目标，实践证明无法实现除非使用plyer模块通知（本版本仍使用win10toast模块）
 
 ### SeewoMonitorKier-V1.4
